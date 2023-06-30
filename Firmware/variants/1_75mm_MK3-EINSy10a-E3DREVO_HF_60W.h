@@ -15,10 +15,10 @@
 #define PRINTER_MMU_TYPE PRINTER_MK3_MMU3
 #define PRINTER_MMU_NAME PRINTER_MK3_MMU3_NAME
 #define FILAMENT_SIZE "1_75mm_MK3"
-#define NOZZLE_TYPE "E3DREVO"
+#define NOZZLE_TYPE "E3DREVO_HF_60W"
 
 // Printer name
-#define CUSTOM_MENDEL_NAME "Prusa i3 MK3-R"
+#define CUSTOM_MENDEL_NAME "Prusa MK3-RHF60"
 
 // Electronics
 #define MOTHERBOARD BOARD_EINSY_1_0a
@@ -327,10 +327,11 @@
 #define  DEFAULT_Ki 1.60
 #define  DEFAULT_Kd 73.76
 #else
-// Define PID constants for E3D REVO
-#define  DEFAULT_Kp 25.00
-#define  DEFAULT_Ki 4.8
-#define  DEFAULT_Kd 32.6
+// Define PID constants for E3D REVO HF 60W
+#define  MAX_OVERSHOOT_PID_AUTOTUNE 30
+#define  DEFAULT_Kp 15.00
+#define  DEFAULT_Ki 2.9
+#define  DEFAULT_Kd 19.2
 #endif
 
 // Extrude mintemp
@@ -401,8 +402,8 @@
 
 #define TEMP_MODEL_Ta_corr -7     // Default ambient temperature correction
 
-#include "temp_model/e3d_REVO.h"
-#define TEMP_MODEL_DEFAULT E3D_REVO // Default E3D REVO model parameters
+#include "temp_model/e3d_REVO_HF_60W.h"
+#define TEMP_MODEL_DEFAULT E3D_REVO_HF_60W // Default E3D REVO HF 60W model parameters
 
 
 /*------------------------------------
